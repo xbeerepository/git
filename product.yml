@@ -1,0 +1,22 @@
+schema-version: 1.0
+
+
+builder:
+  origin: ./git-builder
+  var:
+    version: "{% version %}"
+
+var:
+  version: 2.30.0
+
+provision:
+  - pkg:
+      name: git
+      remove: true
+  - copy:
+      builders: 
+         - git
+         - gitk
+         - git-shell
+      todir: "/usr/bin"
+      unpack: true

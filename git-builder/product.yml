@@ -1,0 +1,28 @@
+schema-version: 1.0
+type: builder
+
+
+var:
+  version: 2.30.0
+
+provision:
+  - pkg: 
+      name: dh-autoreconf libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev install-info
+      update: true
+  - url: https://github.com/git/git/archive/v{% version %}.tar.gz
+
+
+build:
+  - shell:
+      cmds:
+        - make configure
+        - ./configure --prefix=/usr
+        - make all
+        - make install
+      directory: "{% installDir %}/git-{% version %}"
+  - download: 
+      paths:
+         - /usr/bin/git
+         - /usr/bin/gitk
+         - /usr/bin/git-shell
+
