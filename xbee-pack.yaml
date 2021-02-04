@@ -16,7 +16,6 @@ provision:
   - copy:
       builders: 
          - git
-         - gitk
          - git-shell
       todir: "/usr/bin"
       unpack: true

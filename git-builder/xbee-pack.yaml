@@ -6,9 +6,6 @@ var:
   version: 2.30.0
 
 provision:
-  - pkg: 
-      name: dh-autoreconf libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev install-info
-      update: true
   - url: https://github.com/git/git/archive/v{% version %}.tar.gz
 
 
@@ -23,6 +20,6 @@ build:
   - download: 
       paths:
          - /usr/bin/git
-         - /usr/bin/gitk
          - /usr/bin/git-shell
+
 
