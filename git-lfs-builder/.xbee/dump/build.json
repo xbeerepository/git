@@ -1,0 +1,31 @@
+{
+    "actions": [
+        {
+            "order": {
+                "phase": "shell"
+            },
+            "shell": {
+                "async": false,
+                "cmds": [
+                    "make"
+                ],
+                "directory": "/root/go/src/github.com/git-lfs/git-lfs"
+            }
+        },
+        {
+            "download": {
+                "pack": true,
+                "paths": [
+                    "/root/go/src/github.com/git-lfs/git-lfs/bin/git-lfs"
+                ]
+            },
+            "order": {
+                "phase": "last"
+            }
+        }
+    ],
+    "async": false,
+    "container": {
+        "create": true
+    }
+}

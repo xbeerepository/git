@@ -1,0 +1,15 @@
+{
+    "actions": [
+        {
+            "shell": {
+                "async": true,
+                "cmds": [
+                    "{{ .templates }}/attach.sh"
+                ]
+            }
+        }
+    ],
+    "container": {
+        "create": true
+    }
+}

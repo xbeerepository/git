@@ -1,0 +1,11 @@
+{
+    "id": {
+        "origin": "/home/eric/tmp/products/git/git-lfs-builder"
+    },
+    "packages": [
+        "golang"
+    ],
+    "ports": null,
+    "provider": null,
+    "system": null
+}

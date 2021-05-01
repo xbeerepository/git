@@ -1,0 +1,44 @@
+{
+    "actions": [
+        {
+            "SystemPath": {
+                "paths": [
+                    "/usr/local/go/bin",
+                    "/root/go/bin"
+                ]
+            }
+        },
+        {
+            "Pkg": {
+                "Repository": {},
+                "names": [
+                    "git"
+                ]
+            }
+        },
+        {
+            "Url": {
+                "from": {
+                    "location": "https://golang.org/dl/go1.15.3.linux-amd64.tar.gz"
+                },
+                "to": "/usr/local",
+                "unpack": true
+            }
+        },
+        {
+            "Shell": {
+                "cmds": [
+                    "go get github.com/go-delve/delve/cmd/dlv"
+                ]
+            }
+        },
+        {
+            "PersistentDirs": {},
+            "vmOnly": true
+        }
+    ],
+    "async": false,
+    "container": {
+        "create": true
+    }
+}

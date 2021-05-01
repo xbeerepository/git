@@ -1,0 +1,35 @@
+{
+    "actions": [
+        {
+            "Pkg": {
+                "Repository": {},
+                "names": [
+                    "build-essential"
+                ]
+            }
+        },
+        {
+            "Url": {
+                "after": {
+                    "cmds": [
+                        "mkdir -p /root/go/src/github.com/git-lfs/git-lfs",
+                        "mv /opt/git-lfs-2.13.2/* /root/go/src/github.com/git-lfs/git-lfs"
+                    ]
+                },
+                "from": {
+                    "location": "https://github.com/git-lfs/git-lfs/archive/v2.13.2.tar.gz"
+                },
+                "to": "/opt",
+                "unpack": true
+            }
+        },
+        {
+            "PersistentDirs": {},
+            "vmOnly": true
+        }
+    ],
+    "async": false,
+    "container": {
+        "create": true
+    }
+}

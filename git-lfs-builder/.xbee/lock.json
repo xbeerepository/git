@@ -1,0 +1,24 @@
+{
+    "Ids": [
+        [
+            {
+                "version": "latest",
+                "origin": "https://github.com/xbeerepository/golang.git"
+            },
+            {
+                "version": "master",
+                "commit": "0fa2845ec8482e926f1a129c2dc6f55c1b4c4694"
+            }
+        ],
+        [
+            {
+                "version": "20.04",
+                "origin": "https://github.com/xbeerepository/ubuntu.git"
+            },
+            {
+                "version": "20.04",
+                "commit": "cc6870a5791de065296eb99010c4074fd089422c"
+            }
+        ]
+    ]
+}

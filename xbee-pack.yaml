@@ -1,13 +1,17 @@
 schema-version: 1.0
 
-
-builder:
-  origin: ./git-builder
-  var:
-    version: "{% version %}"
-
 var:
   version: 2.30.0
+  lfsVersion: 2.13.2
+
+builders:
+  - origin: ./git-builder
+    var:
+      version: "{% version %}"
+  - origin: ./git-lfs-builder
+    var:
+      version: "{% lfsVersion %}"
+
 
 provision:
   - pkg:
@@ -19,3 +23,6 @@ provision:
          - git-shell
       todir: "/usr/bin"
       unpack: true
+  - copy:
+      builder: git-lfs
+      todir: /usr/bin

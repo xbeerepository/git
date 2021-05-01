@@ -1,0 +1,8 @@
+{
+    "installDir": "/opt",
+    "port": 2345,
+    "version": "1.15.3",
+    "xbeeName": "golang",
+    "xbeeOrigin": "https://github.com/xbeerepository/golang.git",
+    "xbeeVersion": "master"
+}

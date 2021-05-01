@@ -1,0 +1,35 @@
+{
+    "actions": [
+        {
+            "order": {
+                "phase": "shell"
+            },
+            "shell": {
+                "async": false,
+                "cmds": [
+                    "make configure",
+                    "./configure --prefix=/usr",
+                    "make all",
+                    "make install"
+                ],
+                "directory": "/opt/git-2.30.0"
+            }
+        },
+        {
+            "download": {
+                "pack": true,
+                "paths": [
+                    "/usr/bin/git",
+                    "/usr/bin/git-shell"
+                ]
+            },
+            "order": {
+                "phase": "last"
+            }
+        }
+    ],
+    "async": false,
+    "container": {
+        "create": true
+    }
+}

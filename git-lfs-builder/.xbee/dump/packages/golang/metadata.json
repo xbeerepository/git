@@ -1,0 +1,12 @@
+{
+    "id": {
+        "version": "master",
+        "origin": "https://github.com/xbeerepository/golang.git",
+        "commit": "0fa2845ec8482e926f1a129c2dc6f55c1b4c4694"
+    },
+    "ports": [
+        "2345"
+    ],
+    "provider": null,
+    "system": null
+}

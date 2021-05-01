@@ -1,0 +1,68 @@
+{
+    "actions": [
+        {
+            "Pkg": {
+                "Repository": {},
+                "names": [
+                    "Development",
+                    "Tools"
+                ]
+            },
+            "labels": {
+                "osid": [
+                    "centos"
+                ]
+            }
+        },
+        {
+            "Pkg": {
+                "Repository": {},
+                "names": [
+                    "curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-CPAN perl-devel"
+                ]
+            },
+            "labels": {
+                "osid": [
+                    "centos"
+                ]
+            }
+        },
+        {
+            "Pkg": {
+                "Repository": {},
+                "names": [
+                    "dh-autoreconf",
+                    "libcurl4-gnutls-dev",
+                    "libexpat1-dev",
+                    "gettext",
+                    "libz-dev",
+                    "libssl-dev",
+                    "install-info"
+                ],
+                "update": true
+            },
+            "labels": {
+                "osid": [
+                    "ubuntu"
+                ]
+            }
+        },
+        {
+            "Url": {
+                "from": {
+                    "location": "https://github.com/git/git/archive/v2.30.0.tar.gz"
+                },
+                "to": "/opt",
+                "unpack": true
+            }
+        },
+        {
+            "PersistentDirs": {},
+            "vmOnly": true
+        }
+    ],
+    "async": false,
+    "container": {
+        "create": true
+    }
+}
